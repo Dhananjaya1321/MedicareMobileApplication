@@ -18,11 +18,52 @@ export function WelcomePage() {
                 }}>
                     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                         <Text style={{fontSize: 32, fontWeight: 'bold', color: 'white'}}>Find a Doctor!</Text>
-                        <View style={{width: 60,height:1,backgroundColor:'#32CBF1'}}></View>
+                        <View style={{width: 60, height: 1, backgroundColor: '#32CBF1'}}></View>
                         <Text style={{fontSize: 14, color: 'white'}}>With your smart phone</Text>
                     </View>
-                    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                       <Button text={"Login"} styles={{}}/>
+                    <View style={{
+                        flex: 1,
+                        gap: 20,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        width: '100%',
+                        // backgroundColor: 'red'
+                    }}>
+                        <Button
+                            text={"Login"}
+                            stylesPressable={{
+                                flex: 1,
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                width: '60%',
+                                borderRadius: 20,
+                                borderWidth: 2,
+                                borderColor: '#32CBF1',
+                                backgroundColor: '#0D98BA',
+                                fontSize: 50,
+                                height:50,
+                            }}
+                            stylesText={{
+                                fontSize: 18,
+                            }}
+                        />
+                        <Button
+                            text={"Create account"}
+                            stylesPressable={{
+                                flex: 1,
+                                height:80,
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                width: '60%',
+                                borderRadius: 20,
+                                backgroundColor: '#32CBF1',
+                                marginBottom:20
+                            }}
+                            stylesText={{
+                                fontSize: 18,
+                                color:'#0D98BA'
+                            }}
+                        />
                     </View>
                 </View>
             </View>
