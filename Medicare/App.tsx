@@ -8,6 +8,7 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {WelcomePage} from "./pages/WelcomePage.tsx";
+import {LoginPage} from "./pages/LoginPage.tsx";
 
 type SectionProps = PropsWithChildren<{
     title: string;
@@ -15,7 +16,10 @@ type SectionProps = PropsWithChildren<{
 
 function App(): React.JSX.Element {
     return (
-        <WelcomePage/>
+        <>
+            {/*<WelcomePage/>*/}
+<LoginPage/>
+        </>
     );
 }
 
