@@ -2,6 +2,7 @@ import {ImageBackground, Pressable, SafeAreaView, StyleSheet, Text, View} from "
 // @ts-ignore
 import doctor from "../assets/image/doctor.png";
 import React from "react";
+import {Button} from "../components/Button.tsx";
 
 export function WelcomePage() {
     return (
@@ -21,9 +22,7 @@ export function WelcomePage() {
                         <Text style={{fontSize: 14, color: 'white'}}>With your smart phone</Text>
                     </View>
                     <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                        <Pressable>
-                            <Text>Login</Text>
-                        </Pressable>
+                       <Button text={"Login"} styles={{}}/>
                     </View>
                 </View>
             </View>
