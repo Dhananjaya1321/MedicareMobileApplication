@@ -25,6 +25,6 @@ export function InputField({value, placeholder,event}: props) {
 
 type props = {
     value: any,
-    placeholder: string,
+    placeholder: any,
     event:any
 }

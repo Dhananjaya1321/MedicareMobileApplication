@@ -64,6 +64,7 @@ export function WelcomePage() {
                                 fontSize: 18,
                                 color: '#32CBF1'
                             }}
+                            event={''}/*events*/
                         />
                         <Button
                             text={"Create account"}
@@ -81,6 +82,7 @@ export function WelcomePage() {
                                 fontSize: 18,
                                 color: '#0D98BA'
                             }}
+                            event={''}/*events*/
                         />
                         <View style={{flex:.5}}></View>
                     </View>
