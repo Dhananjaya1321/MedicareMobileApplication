@@ -2,8 +2,18 @@ import {Image, InputAccessoryView, SafeAreaView, Text, TextInput, View} from "re
 // @ts-ignore
 import logo from "../assets/image/logo.png";
 import {Button} from "../components/Button.tsx";
+import {InputField} from "../components/InputField.tsx";
+import {useState} from "react";
 
 export function LoginPage() {
+    let [username, setUsername] = useState('');
+    let [password, setPassword] = useState('');
+    let handleUsernameChange = function (event: any) {
+        setUsername(event);
+    }
+    let handlePasswordChange = function (event: any) {
+        setPassword(event);
+    }
     return (
         <SafeAreaView style={{flex: 1}}>
             <View style={{
@@ -27,41 +37,26 @@ export function LoginPage() {
                     borderTopLeftRadius: 20,
                     borderTopRightRadius: 20,
                 }}>
-                    <View style={{width: '80%', justifyContent: 'center', alignItems: 'center'}}>
-                        <Text style={{alignSelf: 'flex-start',color:'black'}}>Username</Text>
-                        <TextInput value={'Username'} style={{
-                            borderRadius: 10,
-                            width: '100%',
-                            height: 50,
-                            backgroundColor: 'red',
-                            borderColor:'black',
-                            borderWidth:1,
-                            paddingLeft:15
-                        }}></TextInput>
-                    </View>
-                    <View style={{width: '80%', justifyContent: 'center', alignItems: 'center'}}>
-                        <Text style={{alignSelf: 'flex-start',color:'black'}}>Username</Text>
-                        <TextInput value={'Username'} style={{
-                            borderRadius: 10,
-                            width: '100%',
-                            height: 50,
-                            backgroundColor: 'red',
-                            borderColor:'black',
-                            borderWidth:1,
-                            paddingLeft:15
-                        }}></TextInput>
-                    </View>
-                    <Button text={'Login'} stylesPressable={{
-                        width: '80%',
-                        height: 50,
-                        backgroundColor: 'red',
-                        borderRadius: 10,
-                        justifyContent: 'center', alignItems: 'center'
-                    }} stylesText={{
-                        fontSize: 18,
-                    }}/>
+                    <InputField value={username} placeholder={'Username'} event={handleUsernameChange}/>
+                    <InputField value={password} placeholder={'Password'} event={handlePasswordChange}/>
+
+                    <Button text={'Login'}
+                            stylesPressable={{
+                                width: '80%',
+                                height: 50,
+                                backgroundColor: '#008dc0',
+                                borderRadius: 10,
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                marginTop: 15
+                            }}
+                            stylesText={{
+                                fontSize: 18,
+                            }}
+                    />
                 </View>
             </View>
         </SafeAreaView>
-    );
+    )
+
 }
