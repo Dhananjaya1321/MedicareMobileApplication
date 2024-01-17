@@ -5,6 +5,7 @@ import {useState} from "react";
 import logo from "../assets/image/logo.png";
 import {Button} from "../components/Button.tsx";
 import {Logo} from "../components/Logo.tsx";
+import {Space} from "../components/Space.tsx";
 
 export function CreateAccountPage() {
     let [fullName, setFullName] = useState('');
@@ -31,19 +32,23 @@ export function CreateAccountPage() {
     return (
         <SafeAreaView style={{flex: 1, backgroundColor: '#0D98BA'}}>
             <ScrollView style={{flex: 1}} contentContainerStyle={{flexGrow: 1}}>
-                    <View style={{
+                <View style={{
                         flex: 1 ,
                         width: '100%',
-
                     }}>
+                        <Space style={{width:'100%',height:50}}/>
                         <Logo/>
+                        <Space style={{width:'100%',height:50}}/>
                         <View style={{
-                            backgroundColor: 'red',
+                            backgroundColor: 'white',
                             flex: 3,
                             gap: 30,
                             justifyContent: 'center',
                             alignItems: 'center',
+                            borderTopRightRadius:30,
+                            borderTopLeftRadius:30
                         }}>
+                            <Space style={{width:'100%',height:20}}/>
                             <InputField value={fullName} placeholder={'Name'} event={handleNameChange}/>
                             <InputField value={nic} placeholder={'NIC (National Identity Card Number)'}
                                         event={handleNICChange}/>
@@ -68,7 +73,7 @@ export function CreateAccountPage() {
                                 event={''}/*event*/
                             />
                         </View>
-                        <View style={{width:'100%',height:50}}></View>
+                        <Space style={{width:'100%',height:50, backgroundColor:'white'}}/>
                     </View>
             </ScrollView>
         </SafeAreaView>
