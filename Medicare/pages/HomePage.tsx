@@ -1,4 +1,4 @@
-import {SafeAreaView, ScrollView, View} from "react-native";
+import {SafeAreaView, ScrollView, Text, View} from "react-native";
 import {Space} from "../components/Space.tsx";
 
 export function HomePage() {
@@ -28,7 +28,12 @@ export function HomePage() {
 
                         </View>{/*Ads and offer section*/}
                         <Space style={{width:'100%',height:50,backgroundColor:'blue'}}/>
+                        <View style={{width:'100%',backgroundColor:'red'}}>
+                            <Text style={{fontSize:18,color:'black',fontWeight:'bold',marginBottom:10}}>Categories</Text>
+                            <View style={{width:'100%'}}>
 
+                            </View>{/*Category items section*/}
+                        </View>{/*Category section*/}
                     </View>{/*This view width is 90% on screen*/}
                 </View>{/*This view width is 100% on screen*/}
             </ScrollView>
