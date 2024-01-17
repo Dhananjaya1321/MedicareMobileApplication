@@ -19,8 +19,8 @@ function App(): React.JSX.Element {
     return (
         <>
             {/*<WelcomePage/>*/}
-            <LoginPage/>
-            {/*<CreateAccountPage/>*/}
+            {/*<LoginPage/>*/}
+            <CreateAccountPage/>
         </>
     );
 }
