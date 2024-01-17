@@ -14,6 +14,7 @@ import logo from "../assets/image/logo.png";
 import {Button} from "../components/Button.tsx";
 import {InputField} from "../components/InputField.tsx";
 import {useState} from "react";
+import {Logo} from "../components/Logo.tsx";
 
 export function LoginPage() {
     let [username, setUsername] = useState('');
@@ -36,15 +37,7 @@ export function LoginPage() {
                         justifyContent: 'center',
                         alignItems: 'center',
                     }}>
-                        <View style={{
-                            flex: 1,
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            width: '100%',
-                        }}>
-                            <Image source={logo} style={{width: 200}}/>
-                            <Text style={{fontSize: 28, color: 'white'}}>Medicare</Text>
-                        </View>
+                        <Logo/>
                         <View style={{
                             flex: 2,
                             gap: 25,

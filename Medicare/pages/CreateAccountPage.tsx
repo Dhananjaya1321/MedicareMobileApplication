@@ -4,6 +4,7 @@ import {useState} from "react";
 // @ts-ignore
 import logo from "../assets/image/logo.png";
 import {Button} from "../components/Button.tsx";
+import {Logo} from "../components/Logo.tsx";
 
 export function CreateAccountPage() {
     let [fullName, setFullName] = useState('');
@@ -12,13 +13,13 @@ export function CreateAccountPage() {
     let [username, setUsername] = useState('');
     let [password, setPassword] = useState('');
     let handleNameChange = function (event: any) {
-        setUsername(event);
+        setFullName(event);
     }
     let handleNICChange = function (event: any) {
-        setUsername(event);
+        setNIC(event);
     }
     let handleAddressChange = function (event: any) {
-        setPassword(event);
+        setAddress(event);
     }
     let handleUsernameChange = function (event: any) {
         setUsername(event);
@@ -35,15 +36,7 @@ export function CreateAccountPage() {
                         width: '100%',
 
                     }}>
-                        <View style={{
-                            flex: 1,
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            width: '100%',
-                        }}>
-                            <Image source={logo} style={{width: 200}}/>
-                            <Text style={{fontSize: 28, color: 'white'}}>Medicare</Text>
-                        </View>
+                        <Logo/>
                         <View style={{
                             backgroundColor: 'red',
                             flex: 3,
