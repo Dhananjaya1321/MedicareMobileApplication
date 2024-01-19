@@ -27,7 +27,7 @@ export function HomePage() {
                         width: '90%',
                         justifyContent: 'flex-start',
                         alignItems: 'center',
-                        backgroundColor: 'white'
+                        // backgroundColor: 'white'
                     }}>
                         <View style={{
                             width: '100%',
@@ -38,7 +38,7 @@ export function HomePage() {
                         }}>
                         </View>{/*Ads and offer section*/}
                         {/*--------------------------------------------------------------------------------------------*/}
-                        <Space height={50} color={'blue'}/>
+                        <Space height={30}/>
 
                         <View style={{width: '100%'}}>
                             <Text style={{
@@ -66,7 +66,7 @@ export function HomePage() {
                         </View>{/*Category section*/}
                         {/*--------------------------------------------------------------------------------------------*/}
 
-                        <Space height={50} color={'blue'}/>
+                        <Space height={30}/>
 
                         <View style={{width: '100%'}}>
                             <Text style={{
@@ -83,10 +83,12 @@ export function HomePage() {
                                 alignItems: 'center',
                                 // backgroundColor: 'red',
                             }}>
-                                <DoctorCard/>
-                                <Space height={50} color={'blue'}/>
-                                <Space height={50} color={'blue'}/>
-                                <Space height={50} color={'blue'}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Cardiologist'}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Dermatologist'}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Endocrinologist'}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Gastroenterologist'}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Internists'}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Psychiatrist'}/>
                             </View>
                         </View>{/**/}
                     </View>{/*This view width is 90% on screen*/}

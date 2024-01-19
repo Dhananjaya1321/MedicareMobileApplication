@@ -1,24 +1,48 @@
-import {Text, View} from "react-native";
+import {Platform, StyleSheet, Text, View} from "react-native";
+import {CartButton} from "./CartButton.tsx";
 
-export function DoctorCard() {
+export function DoctorCard({name, category}: props) {
     return (
-        <View
-            style={{
-                width: '100%',
-                height: 100,
-                borderRadius: 12,
-                backgroundColor: 'green',
-                flexDirection: 'row',
-                alignItems: 'center',
-                gap:10,
-                position:'relative'
-            }}>
-            <View style={{width: 80, height: 80, backgroundColor: 'red',marginLeft:10,borderRadius:10}}></View>
-            <View style={{width: 250,height: 80}}>
-                <Text style={{fontSize:22, color:'black'}}>J. P. Isuru Dhananjaya</Text>
-                <Text style={{fontSize:16, color:'black'}}>Cardiologist</Text>
-            </View>
-
+        <View style={styles.cardMainView}>
+            <View style={styles.profilePhotoView}></View>{/*profile photo*/}
+            <View style={styles.profileDetailsView}>
+                <Text style={styles.nameText}>{name}</Text>{/*name*/}
+                <Text style={styles.categoryText}>{category}</Text>{/*category*/}
+            </View>{/*details view*/}
+            <CartButton event={''}/>
         </View>
     );
 }
+
+type props = {
+    name: string,
+    category: string
+}
+
+const styles = StyleSheet.create({
+    cardMainView: {
+        width: '100%',
+        height: 100,
+        borderRadius: 12,
+        backgroundColor: 'white',
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 10,
+        position: 'relative',
+        ...Platform.select({
+            ios: {
+                shadowColor: 'black',
+                shadowOffset: {width: 0, height: 4},
+                shadowOpacity: 0.3,
+                shadowRadius: 4,
+            },
+            android: {
+                elevation: 4,
+            },
+        }),
+    },
+    profilePhotoView: {width: 80, height: 80, backgroundColor: 'red', marginLeft: 10, borderRadius: 10},
+    profileDetailsView: {width: 250, height: 80},
+    nameText: {fontSize: 22, color: 'black'},
+    categoryText: {fontSize: 16, color: 'black'}
+});
