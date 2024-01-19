@@ -11,6 +11,7 @@ import tooth from "../assets/icon/tooth.png";
 // @ts-ignore
 import category from "../assets/icon/categorize.png";
 import {CategoryButton} from "../components/CategoryButton.tsx";
+import {DoctorCard} from "../components/DoctorCard.tsx";
 
 export function HomePage() {
     return (
@@ -80,9 +81,9 @@ export function HomePage() {
                                 gap: 10,
                                 // justifyContent: 'flex-start',
                                 alignItems: 'center',
-                                backgroundColor: 'red',
+                                // backgroundColor: 'red',
                             }}>
-                                <Space height={50} color={'blue'}/>
+                                <DoctorCard/>
                                 <Space height={50} color={'blue'}/>
                                 <Space height={50} color={'blue'}/>
                                 <Space height={50} color={'blue'}/>
