@@ -7,6 +7,7 @@ import categoryNavBar from "../assets/icon/category-nav-bar.png";
 import calenderNavBar from "../assets/icon/calendar-nav-bar.png";
 // @ts-ignore
 import userNavBar from "../assets/icon/user-nav-bar.png";
+import {NavButton} from "./NavButton.tsx";
 
 export function NavBar() {
     return (
@@ -22,22 +23,10 @@ export function NavBar() {
                 alignItems: 'center'
             }}
         >
-            <View style={{width: 50, height: 50, justifyContent: 'center', alignItems: 'center'}}>
-                <Image source={homeNavBar} style={{width: 40, height: 40}}/>
-                <Text style={{color: 'black', fontSize: 12, alignSelf: 'center'}}>Home</Text>
-            </View>
-            <View style={{width: 50, height: 50, justifyContent: 'center', alignItems: 'center'}}>
-                <Image source={categoryNavBar} style={{width: 40, height: 40}}/>
-                <Text style={{color: 'black', fontSize: 12, alignSelf: 'center'}}>Category</Text>
-            </View>
-            <View style={{width: 50, height: 50, justifyContent: 'center', alignItems: 'center'}}>
-                <Image source={calenderNavBar} style={{width: 40, height: 40}}/>
-                <Text style={{color: 'black', fontSize: 12, alignSelf: 'center'}}>booking</Text>
-            </View>
-            <View style={{width: 50, height: 50, justifyContent: 'center', alignItems: 'center'}}>
-                <Image source={userNavBar} style={{width: 40, height: 40}}/>
-                <Text style={{color: 'black', fontSize: 12, alignSelf: 'center'}}>profile</Text>
-            </View>
+            <NavButton icon={homeNavBar} event={''} name={'Home'}/>
+            <NavButton icon={categoryNavBar} event={''} name={'Category'}/>
+            <NavButton icon={calenderNavBar} event={''} name={'Booking'}/>
+            <NavButton icon={userNavBar} event={''} name={'Profile'}/>
         </View>
     );
 }
