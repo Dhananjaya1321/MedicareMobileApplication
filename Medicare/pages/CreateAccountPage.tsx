@@ -38,9 +38,9 @@ export function CreateAccountPage() {
                     width: '100%',
                 }}>
                     <GoBackButton event={''}/>
-                    <Space style={{width: '100%', height: 50}}/>
+                    <Space height={50}/>
                     <Logo/>
-                    <Space style={{width: '100%', height: 50}}/>
+                    <Space height={50}/>
                     <View style={{
                         backgroundColor: 'white',
                         flex: 3,
@@ -50,7 +50,7 @@ export function CreateAccountPage() {
                         borderTopRightRadius: 30,
                         borderTopLeftRadius: 30
                     }}>
-                        <Space style={{width: '100%', height: 20}}/>
+                        <Space height={20}/>
                         <InputField value={fullName} placeholder={'Name'} event={handleNameChange}/>
                         <InputField value={nic} placeholder={'NIC (National Identity Card Number)'}
                                     event={handleNICChange}/>
@@ -75,7 +75,7 @@ export function CreateAccountPage() {
                             event={''}/*event*/
                         />
                     </View>
-                    <Space style={{width: '100%', height: 50, backgroundColor: 'white'}}/>
+                    <Space height={50} color={'white'}/>
                 </View>
             </ScrollView>
         </SafeAreaView>

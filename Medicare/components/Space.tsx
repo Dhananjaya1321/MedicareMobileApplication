@@ -1,11 +1,12 @@
 import {View} from "react-native";
 
-export function Space({style}:props) {
+export function Space({height,color}: props) {
     return (
-        <View style={style}></View>
+        <View style={{width: '100%', height: height, backgroundColor:color}}></View>
     );
 }
 
-type props={
-    style:any
+type props = {
+    height: any,
+    color?:any
 }

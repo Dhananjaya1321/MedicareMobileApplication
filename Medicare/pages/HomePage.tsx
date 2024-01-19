@@ -37,7 +37,7 @@ export function HomePage() {
                         }}>
                         </View>{/*Ads and offer section*/}
                         {/*--------------------------------------------------------------------------------------------*/}
-                        <Space style={{width: '100%', height: 50, backgroundColor: 'blue'}}/>
+                        <Space height={50} color={'blue'}/>
 
                         <View style={{width: '100%'}}>
                             <Text style={{
@@ -65,7 +65,7 @@ export function HomePage() {
                         </View>{/*Category section*/}
                         {/*--------------------------------------------------------------------------------------------*/}
 
-                        <Space style={{width: '100%', height: 50, backgroundColor: 'blue'}}/>
+                        <Space height={50} color={'blue'}/>
 
                         <View style={{width: '100%'}}>
                             <Text style={{
@@ -74,8 +74,20 @@ export function HomePage() {
                                 fontWeight: 'bold',
                                 marginBottom: 10
                             }}>Top Doctors</Text>
-
-                        </View>
+                            <View style={{
+                                width: '100%',
+                                flexDirection: 'column',
+                                gap: 10,
+                                // justifyContent: 'flex-start',
+                                alignItems: 'center',
+                                backgroundColor: 'red',
+                            }}>
+                                <Space height={50} color={'blue'}/>
+                                <Space height={50} color={'blue'}/>
+                                <Space height={50} color={'blue'}/>
+                                <Space height={50} color={'blue'}/>
+                            </View>
+                        </View>{/**/}
                     </View>{/*This view width is 90% on screen*/}
                 </View>{/*This view width is 100% on screen*/}
             </ScrollView>
