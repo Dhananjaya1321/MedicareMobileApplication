@@ -10,17 +10,10 @@ import heart from "../assets/icon/heart.png";
 import tooth from "../assets/icon/tooth.png";
 // @ts-ignore
 import category from "../assets/icon/categorize.png";
-// @ts-ignore
-import categoryNavBar from "../assets/icon/category-nav-bar.png";
-// @ts-ignore
-import homeNavBar from "../assets/icon/home-nav-bar.png";
-// @ts-ignore
-import userNavBar from "../assets/icon/user-nav-bar.png";
-// @ts-ignore
-import calenderNavBar from "../assets/icon/calendar-nav-bar.png";
 import {CategoryButton} from "../components/CategoryButton.tsx";
 import {DoctorCard} from "../components/DoctorCard.tsx";
 import {NavBar} from "../components/NavBar.tsx";
+import {AdsAndOffers} from "../components/AdsAndOffers.tsx";
 
 export function HomePage() {
     return (
@@ -38,16 +31,10 @@ export function HomePage() {
                         alignItems: 'center',
                         // backgroundColor: 'white'
                     }}>
-                        <View style={{
-                            width: '100%',
-                            height: 220,
-                            backgroundColor: 'red',
-                            justifyContent: 'center',
-                            alignItems: 'center'
-                        }}>
-                        </View>{/*Ads and offer section*/}
+                       <AdsAndOffers/>{/*AdsAndOffers and offer section*/}
                         {/*--------------------------------------------------------------------------------------------*/}
-                        <Space height={30}/>
+
+                        <Space height={10}/>
 
                         <View style={{width: '100%'}}>
                             <Text style={{
@@ -75,7 +62,7 @@ export function HomePage() {
                         </View>{/*Category section*/}
                         {/*--------------------------------------------------------------------------------------------*/}
 
-                        <Space height={30}/>
+                        <Space height={20}/>
 
                         <View style={{width: '100%'}}>
                             <Text style={{
