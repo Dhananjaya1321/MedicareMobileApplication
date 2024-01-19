@@ -23,8 +23,8 @@ type props = {
 
 const styles = StyleSheet.create({
     shadowContainer: {
-        width: 60,
-        height: 60,
+        width: 65,
+        height: 65,
         backgroundColor: 'white',
         borderRadius: 10,
         justifyContent: 'center',

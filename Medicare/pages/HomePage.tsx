@@ -41,7 +41,7 @@ export function HomePage() {
                                 fontSize: 18,
                                 color: 'black',
                                 fontWeight: 'bold',
-                                marginBottom: 10
+                                marginBottom: 15
                             }}>Categories</Text>
                             <View
                                 style={{
