@@ -1,4 +1,4 @@
-import {SafeAreaView, ScrollView, Text, View} from "react-native";
+import {Image, SafeAreaView, ScrollView, Text, View} from "react-native";
 import {Space} from "../components/Space.tsx";
 // @ts-ignore
 import brain from "../assets/icon/brain.png";
@@ -10,8 +10,17 @@ import heart from "../assets/icon/heart.png";
 import tooth from "../assets/icon/tooth.png";
 // @ts-ignore
 import category from "../assets/icon/categorize.png";
+// @ts-ignore
+import categoryNavBar from "../assets/icon/category-nav-bar.png";
+// @ts-ignore
+import homeNavBar from "../assets/icon/home-nav-bar.png";
+// @ts-ignore
+import userNavBar from "../assets/icon/user-nav-bar.png";
+// @ts-ignore
+import calenderNavBar from "../assets/icon/calendar-nav-bar.png";
 import {CategoryButton} from "../components/CategoryButton.tsx";
 import {DoctorCard} from "../components/DoctorCard.tsx";
+import {NavBar} from "../components/NavBar.tsx";
 
 export function HomePage() {
     return (
@@ -103,23 +112,7 @@ export function HomePage() {
                     </View>{/*This view width is 90% on screen*/}
                 </View>{/*This view width is 100% on screen*/}
             </ScrollView>
-            <View
-                style={{
-                    width: '100%',
-                    height: 60,
-                    backgroundColor: 'red',
-                    position: 'absolute',
-                    bottom: 0,
-                    flexDirection: 'row',
-                    justifyContent:'space-around',
-                    alignItems:'center'
-                }}
-            >
-                <View style={{width:50,height:50,backgroundColor:'blue'}}></View>
-                <View style={{width:50,height:50,backgroundColor:'blue'}}></View>
-                <View style={{width:50,height:50,backgroundColor:'blue'}}></View>
-                <View style={{width:50,height:50,backgroundColor:'blue'}}></View>
-            </View>{/*bottom navigation bar*/}
+            <NavBar/>{/*bottom navigation bar*/}
         </SafeAreaView>
     );
 }
