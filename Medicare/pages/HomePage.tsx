@@ -89,11 +89,37 @@ export function HomePage() {
                                 <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Gastroenterologist'}/>
                                 <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Internists'}/>
                                 <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Psychiatrist'}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Cardiologist'}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Dermatologist'}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Endocrinologist'}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Gastroenterologist'}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Internists'}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Psychiatrist'}/>
                             </View>
-                        </View>{/**/}
+                        </View>{/*card section*/}
+
+                        <Space height={70}/>
+                        {/*--------------------------------------------------------------------------------------------*/}
                     </View>{/*This view width is 90% on screen*/}
                 </View>{/*This view width is 100% on screen*/}
             </ScrollView>
+            <View
+                style={{
+                    width: '100%',
+                    height: 60,
+                    backgroundColor: 'red',
+                    position: 'absolute',
+                    bottom: 0,
+                    flexDirection: 'row',
+                    justifyContent:'space-around',
+                    alignItems:'center'
+                }}
+            >
+                <View style={{width:50,height:50,backgroundColor:'blue'}}></View>
+                <View style={{width:50,height:50,backgroundColor:'blue'}}></View>
+                <View style={{width:50,height:50,backgroundColor:'blue'}}></View>
+                <View style={{width:50,height:50,backgroundColor:'blue'}}></View>
+            </View>{/*bottom navigation bar*/}
         </SafeAreaView>
     );
 }

@@ -43,6 +43,6 @@ const styles = StyleSheet.create({
     },
     profilePhotoView: {width: 80, height: 80, backgroundColor: 'red', marginLeft: 10, borderRadius: 10},
     profileDetailsView: {width: 250, height: 80},
-    nameText: {fontSize: 22, color: 'black'},
-    categoryText: {fontSize: 16, color: 'black'}
+    nameText: {fontSize: 20, color: 'black'},
+    categoryText: {fontSize: 14, color: 'black',marginTop:5}
 });
