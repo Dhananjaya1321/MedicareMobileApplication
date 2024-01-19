@@ -28,7 +28,6 @@ export function HomePage() {
                         alignItems: 'center',
                         backgroundColor: 'white'
                     }}>
-
                         <View style={{
                             width: '100%',
                             height: 220,
@@ -36,23 +35,47 @@ export function HomePage() {
                             justifyContent: 'center',
                             alignItems: 'center'
                         }}>
-
                         </View>{/*Ads and offer section*/}
+                        {/*--------------------------------------------------------------------------------------------*/}
                         <Space style={{width: '100%', height: 50, backgroundColor: 'blue'}}/>
-                        <View style={{width: '100%', backgroundColor: 'red'}}>
+
+                        <View style={{width: '100%'}}>
                             <Text style={{
                                 fontSize: 18,
                                 color: 'black',
                                 fontWeight: 'bold',
                                 marginBottom: 10
                             }}>Categories</Text>
-                            <View style={{width: '100%',flexDirection:'row',gap:20,justifyContent:'space-evenly',alignItems:'center',backgroundColor:'blue',height:70}}>
+                            <View
+                                style={{
+                                    width: '100%',
+                                    flexDirection: 'row',
+                                    gap: 20,
+                                    justifyContent: 'space-evenly',
+                                    alignItems: 'center',
+                                    // backgroundColor: 'blue',
+                                    height: 70
+                                }}
+                            >
                                 <CategoryButton icon={eye} event={''} categoryName={'eye'}/>
                                 <CategoryButton icon={heart} event={''} categoryName={'heart'}/>
                                 <CategoryButton icon={tooth} event={''} categoryName={'tooth'}/>
                                 <CategoryButton icon={category} event={''} categoryName={'other'}/>
                             </View>{/*Category items section*/}
                         </View>{/*Category section*/}
+                        {/*--------------------------------------------------------------------------------------------*/}
+
+                        <Space style={{width: '100%', height: 50, backgroundColor: 'blue'}}/>
+
+                        <View style={{width: '100%'}}>
+                            <Text style={{
+                                fontSize: 18,
+                                color: 'black',
+                                fontWeight: 'bold',
+                                marginBottom: 10
+                            }}>Top Doctors</Text>
+
+                        </View>
                     </View>{/*This view width is 90% on screen*/}
                 </View>{/*This view width is 100% on screen*/}
             </ScrollView>

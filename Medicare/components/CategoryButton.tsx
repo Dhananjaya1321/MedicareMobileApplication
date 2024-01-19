@@ -1,24 +1,16 @@
-import {Image, Pressable, Text, View} from "react-native";
+import {Image, Platform, Pressable, StyleSheet, Text, View} from "react-native";
 import React from "react";
 
 export function CategoryButton({icon, event, categoryName}: props) {
     return (
         <View>
             <Pressable
-                style={{
-                    width: 60,
-                    height: 60,
-                    backgroundColor: 'white',
-                    borderRadius: 10,
-                    justifyContent: 'center',
-                    alignItems: 'center'
-
-                }}
+                style={styles.shadowContainer}
                 onPress={event}
             >
-                <Image source={icon} style={{width: 40, height: 40}}/>
+                <Image source={icon} style={styles.icon}/>
             </Pressable>
-            <Text style={{alignSelf:'center'}}>{categoryName}</Text>
+            <Text style={styles.text}>{categoryName}</Text>
         </View>
     );
 }
@@ -26,5 +18,35 @@ export function CategoryButton({icon, event, categoryName}: props) {
 type props = {
     icon: any,
     event: any,
-    categoryName:string
+    categoryName: string
 }
+
+const styles = StyleSheet.create({
+    shadowContainer: {
+        width: 60,
+        height: 60,
+        backgroundColor: 'white',
+        borderRadius: 10,
+        justifyContent: 'center',
+        alignItems: 'center',
+        ...Platform.select({
+            ios: {
+                shadowColor: 'black',
+                shadowOffset: {width: 0, height: 4},
+                shadowOpacity: 0.3,
+                shadowRadius: 4,
+            },
+            android: {
+                elevation: 4,
+            },
+        }),
+    },
+    icon: {
+        width: 40,
+        height: 40
+    },
+    text: {
+        alignSelf: 'center',
+        color: 'black'
+    }
+});
