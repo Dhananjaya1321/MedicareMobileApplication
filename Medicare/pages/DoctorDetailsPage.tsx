@@ -1,10 +1,11 @@
 import {ImageBackground, SafeAreaView, ScrollView, Text, View} from "react-native";
 // @ts-ignore
-import image from "../../assets/image/doctor.png";
-import {Space} from "../../components/Space.tsx";
-import {Button} from "../../components/Button.tsx";
+import image from "../assets/image/doctor.png";
+import {Space} from "../components/Space.tsx";
+import {Button} from "../components/Button.tsx";
+import {GoBackButton} from "../components/GoBackButton.tsx";
 
-export function DoctorDetails() {
+export function DoctorDetailsPage() {
     return (
         <SafeAreaView style={{flex: 1, backgroundColor: '#0D98BA'}}>
             <ScrollView style={{flex: 1}} contentContainerStyle={{flexGrow: 1}}>
@@ -13,6 +14,7 @@ export function DoctorDetails() {
                     width: '100%',
                     alignItems: 'center',
                 }}>
+                    <GoBackButton event={''}/>
                     <ImageBackground source={image} style={{width: 300, height: 500}}/>
                     <View style={{
                         width: '100%',
