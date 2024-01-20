@@ -11,6 +11,7 @@ export function GoBackButton({event}: props) {
             width: 50,
             height: 50,
             // backgroundColor: 'red',
+            zIndex:50,
             borderRadius: 50,
             position: 'absolute',
             top: 5,

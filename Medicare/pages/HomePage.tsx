@@ -31,7 +31,7 @@ export function HomePage() {
                         alignItems: 'center',
                         // backgroundColor: 'white'
                     }}>
-                       <AdsAndOffers/>{/*AdsAndOffers and offer section*/}
+                        <AdsAndOffers/>{/*AdsAndOffers and offer section*/}
                         {/*--------------------------------------------------------------------------------------------*/}
 
                         <Space height={10}/>
