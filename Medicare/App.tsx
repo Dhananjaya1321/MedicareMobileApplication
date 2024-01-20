@@ -13,6 +13,7 @@ import {CreateAccountPage} from "./pages/CreateAccountPage.tsx";
 import {HomePage} from "./pages/HomePage.tsx";
 import {AllCategories} from "./pages/subPages/AllCategories.tsx";
 import {SearchDetails} from "./pages/subPages/SearchDetails.tsx";
+import {DoctorDetails} from "./pages/subPages/DoctorDetails.tsx";
 
 type SectionProps = PropsWithChildren<{
     title: string;
@@ -28,7 +29,8 @@ function App(): React.JSX.Element {
 
             {/*------------------------------------------------------------------------------------*/}
             {/*<AllCategories/>*/}
-            <SearchDetails/>
+            {/*<SearchDetails/>*/}
+            <DoctorDetails/>
         </>
     );
 }

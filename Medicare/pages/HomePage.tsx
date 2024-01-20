@@ -14,8 +14,15 @@ import {CategoryButton} from "../components/CategoryButton.tsx";
 import {DoctorCard} from "../components/DoctorCard.tsx";
 import {NavBar} from "../components/NavBar.tsx";
 import {AdsAndOffers} from "../components/AdsAndOffers.tsx";
+import {SearchBar} from "../components/SearchBar.tsx";
+import {useState} from "react";
 
 export function HomePage() {
+    const [search, setSearchValue] = useState('');
+    let handleSearchEvent=function (event:any) {
+        setSearchValue(event);
+    }
+
     return (
         <SafeAreaView style={{flex: 1, backgroundColor: '#e9f3fd'}}>
             <ScrollView style={{flex: 1}} contentContainerStyle={{flexGrow: 1}}>
@@ -31,6 +38,10 @@ export function HomePage() {
                         alignItems: 'center',
                         // backgroundColor: 'white'
                     }}>
+
+                        <Space height={40}/>
+                        <SearchBar value={search} event={handleSearchEvent}/>
+                        <Space height={30}/>
                         <AdsAndOffers/>{/*AdsAndOffers and offer section*/}
                         {/*--------------------------------------------------------------------------------------------*/}
 
