@@ -25,8 +25,8 @@ function App(): React.JSX.Element {
         <>
             {/*<WelcomePage/>*/}
             {/*<LoginPage/>*/}
-            <CreateAccountPage/>
-            {/*<HomePage/>*/}
+            {/*<CreateAccountPage/>*/}
+            <HomePage/>
 
             {/*------------------------------------------------------------------------------------*/}
             {/*<AllCategories/>*/}

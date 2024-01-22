@@ -1,4 +1,4 @@
-import {Image, SafeAreaView, ScrollView, Text, View} from "react-native";
+import {Image, SafeAreaView, ScrollView, StyleSheet, Text, View} from "react-native";
 import {Space} from "../components/Space.tsx";
 // @ts-ignore
 import brain from "../assets/icon/brain.png";
@@ -19,26 +19,21 @@ import {useState} from "react";
 
 export function HomePage() {
     const [search, setSearchValue] = useState('');
-    let handleSearchEvent=function (event:any) {
+    let handleSearchEvent = function (event: any) {
         setSearchValue(event);
+    }
+    let handleCategoryButtons = function (event: any) {
+
+    }
+    let handleCategoryButton = function (event: any) {
+
     }
 
     return (
-        <SafeAreaView style={{flex: 1, backgroundColor: '#e9f3fd'}}>
-            <ScrollView style={{flex: 1}} contentContainerStyle={{flexGrow: 1}}>
-                <View style={{
-                    flex: 1,
-                    width: '100%',
-                    alignItems: 'center',
-                }}>
-                    <View style={{
-                        flex: 1,
-                        width: '90%',
-                        justifyContent: 'flex-start',
-                        alignItems: 'center',
-                        // backgroundColor: 'white'
-                    }}>
-
+        <SafeAreaView style={styles.safeAreaView}>
+            <ScrollView style={styles.scrollView} contentContainerStyle={{flexGrow: 1}}>
+                <View style={styles.mainView}>
+                    <View style={styles.subMainView}>
                         <Space height={40}/>
                         <SearchBar value={search} event={handleSearchEvent}/>
                         <Space height={30}/>
@@ -47,49 +42,22 @@ export function HomePage() {
 
                         <Space height={10}/>
 
-                        <View style={{width: '100%'}}>
-                            <Text style={{
-                                fontSize: 18,
-                                color: 'black',
-                                fontWeight: 'bold',
-                                marginBottom: 15
-                            }}>Categories</Text>
-                            <View
-                                style={{
-                                    width: '100%',
-                                    flexDirection: 'row',
-                                    gap: 20,
-                                    justifyContent: 'space-evenly',
-                                    alignItems: 'center',
-                                    // backgroundColor: 'blue',
-                                    height: 70
-                                }}
-                            >
-                                <CategoryButton icon={eye} event={''} categoryName={'eye'}/>
-                                <CategoryButton icon={heart} event={''} categoryName={'heart'}/>
-                                <CategoryButton icon={tooth} event={''} categoryName={'tooth'}/>
-                                <CategoryButton icon={category} event={''} categoryName={'other'}/>
+                        <View style={styles.cartAndCategoryView}>
+                            <Text style={styles.categoryText}>Categories</Text>
+                            <View style={styles.categoryView}>
+                                <CategoryButton icon={eye} event={handleCategoryButtons} categoryName={'eye'}/>
+                                <CategoryButton icon={heart} event={handleCategoryButtons} categoryName={'heart'}/>
+                                <CategoryButton icon={tooth} event={handleCategoryButtons} categoryName={'tooth'}/>
+                                <CategoryButton icon={category} event={handleCategoryButton} categoryName={'other'}/>
                             </View>{/*Category items section*/}
                         </View>{/*Category section*/}
                         {/*--------------------------------------------------------------------------------------------*/}
 
                         <Space height={20}/>
 
-                        <View style={{width: '100%'}}>
-                            <Text style={{
-                                fontSize: 18,
-                                color: 'black',
-                                fontWeight: 'bold',
-                                marginBottom: 10
-                            }}>Top Doctors</Text>
-                            <View style={{
-                                width: '100%',
-                                flexDirection: 'column',
-                                gap: 10,
-                                // justifyContent: 'flex-start',
-                                alignItems: 'center',
-                                // backgroundColor: 'red',
-                            }}>
+                        <View style={styles.cartAndCategoryView}>
+                            <Text style={styles.topDoctorsText}>Top Doctors</Text>
+                            <View style={styles.doctorsCardView}>
                                 <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Cardiologist'}/>
                                 <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Dermatologist'}/>
                                 <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Endocrinologist'}/>
@@ -114,3 +82,47 @@ export function HomePage() {
         </SafeAreaView>
     );
 }
+
+let styles = StyleSheet.create({
+    safeAreaView: {flex: 1, backgroundColor: '#e9f3fd'},
+    scrollView: {flex: 1},
+    mainView: {
+        flex: 1,
+        width: '100%',
+        alignItems: 'center',
+    },
+    subMainView: {
+        flex: 1,
+        width: '90%',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+    },
+    cartAndCategoryView: {width: '100%'},
+    categoryText: {
+        fontSize: 18,
+        color: 'black',
+        fontWeight: 'bold',
+        marginBottom: 15
+    },
+    categoryView: {
+        width: '100%',
+        flexDirection: 'row',
+        gap: 20,
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+        // backgroundColor: 'blue',
+        height: 70
+    },
+    topDoctorsText: {
+        fontSize: 18,
+        color: 'black',
+        fontWeight: 'bold',
+        marginBottom: 10
+    },
+    doctorsCardView: {
+        width: '100%',
+        flexDirection: 'column',
+        gap: 10,
+        alignItems: 'center',
+    }
+})
