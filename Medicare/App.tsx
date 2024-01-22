@@ -23,7 +23,7 @@ type SectionProps = PropsWithChildren<{
 function App(): React.JSX.Element {
     return (
         <>
-            {/*<WelcomePage/>*/}
+            <WelcomePage/>
             {/*<LoginPage/>*/}
             {/*<CreateAccountPage/>*/}
             {/*<HomePage/>*/}
@@ -34,7 +34,7 @@ function App(): React.JSX.Element {
 
             {/*------------------------------------------------------------------------------------*/}
             {/*<DoctorDetailsPage/>*/}
-            <BookingPage/>
+            {/*<BookingPage/>*/}
         </>
     );
 }
