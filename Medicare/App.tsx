@@ -23,8 +23,8 @@ type SectionProps = PropsWithChildren<{
 function App(): React.JSX.Element {
     return (
         <>
-            <WelcomePage/>
-            {/*<LoginPage/>*/}
+            {/*<WelcomePage/>*/}
+            <LoginPage/>
             {/*<CreateAccountPage/>*/}
             {/*<HomePage/>*/}
 

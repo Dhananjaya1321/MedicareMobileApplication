@@ -9,6 +9,7 @@ export function WelcomePage() {
     let handleLogin=()=>{
 
     }
+
      let handleCreateAccount=()=>{
 
     }
