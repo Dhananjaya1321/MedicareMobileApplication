@@ -1,7 +1,9 @@
-import {Button, SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View} from "react-native";
+import {SafeAreaView, ScrollView, StyleSheet, Text, TextInput, View} from "react-native";
 import {GoBackButton} from "../components/GoBackButton.tsx";
 import {Space} from "../components/Space.tsx";
 import DatePicker from "../components/DatePicker.tsx";
+import {Button} from "../components/Button.tsx";
+import {TimePicker} from "../components/TimePicker.tsx";
 
 export function BookingPage() {
 
@@ -25,14 +27,19 @@ export function BookingPage() {
                         <Text style={{fontSize: 18, color: 'black', marginTop: 2}}>Cardiologist</Text>
                         <Space height={20}/>
 
-                        <View style={{width:'80%',height:1,backgroundColor:'#0D98BA',alignSelf:'center'}}/>
+                        <View style={{width: '80%', height: 1, backgroundColor: '#0D98BA', alignSelf: 'center'}}/>
                         <Space height={20}/>
 
-                        <Text style={{fontSize: 18, color: 'black', marginTop: 2,fontWeight: 'bold'}}>Select Date</Text>
+                        <Text style={{fontSize: 18, color: 'black', marginTop: 2, fontWeight: 'bold'}}>Select
+                            Date</Text>
                         <Space height={10}/>
                         <DatePicker/>
 
                         <Space height={20}/>
+
+                        <View>
+                           <TimePicker/>
+                        </View>
                     </View>
                 </View>
             </ScrollView>
