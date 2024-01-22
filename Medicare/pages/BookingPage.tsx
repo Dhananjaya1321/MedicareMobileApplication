@@ -35,11 +35,28 @@ export function BookingPage() {
                         <Space height={10}/>
                         <DatePicker/>
 
-                        <Space height={20}/>
-
                         <View>
-                           <TimePicker/>
+                            <TimePicker title={'Morning'} time1={'8:00'} time2={'9:00'} time3={'10:00'}/>
+                            <TimePicker title={'Afternoon'} time1={'4:00'} time2={'5:00'} time3={'6:00'}/>
+                            <TimePicker title={'Night'} time1={'8:00'} time2={'9:00'} time3={'10:00'}/>
                         </View>
+
+                        <Space height={35}/>
+                        <Button
+                            text={'Book now'}
+                            stylesPressable={{
+                                alignSelf:'center',
+                                borderRadius: 10,
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                width: '90%',
+                                height: 60,
+                                backgroundColor: '#0D98BA'
+                            }}
+                            stylesText={{
+                                fontSize: 22, color: 'white', fontWeight: 'bold'
+                            }}
+                            event={''}/>
                     </View>
                 </View>
             </ScrollView>

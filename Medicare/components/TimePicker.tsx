@@ -1,51 +1,66 @@
 import {Text, View} from "react-native";
 import {Button} from "./Button.tsx";
+import {Space} from "./Space.tsx";
 
-export const TimePicker = () => {
+export const TimePicker = ({title, time1, time2, time3}:props) => {
     return (
         <>
-            <Text style={{color: 'black', fontSize: 22}}>Morning</Text>
+            <Space height={20}/>
+            <Text style={{color: 'black', fontSize: 18}}>{title}</Text>
             <View style={{marginTop: 10, flexDirection: 'row', justifyContent: 'space-around'}}>
                 <Button
                     event={''}
                     stylesText={{fontSize: 18, color: 'black', fontWeight: 'bold'}}
-                    text={'8:00'}
+                    text={time1}
                     stylesPressable={{
+                        borderColor:'#0D98BA',
+                        borderWidth:1,
                         borderRadius: 10,
                         alignItems: 'center',
                         justifyContent: 'center',
                         width: 80,
                         height: 50,
-                        backgroundColor: '#0D98BA'
+                        backgroundColor: '#e9f3fd'
                     }}
                 />
                 <Button
                     event={''}
                     stylesText={{fontSize: 18, color: 'black', fontWeight: 'bold'}}
-                    text={'8:00'}
+                    text={time2}
                     stylesPressable={{
+                        borderColor:'#0D98BA',
+                        borderWidth:1,
                         borderRadius: 10,
                         alignItems: 'center',
                         justifyContent: 'center',
                         width: 80,
                         height: 50,
-                        backgroundColor: '#0D98BA'
+                        backgroundColor: '#e9f3fd'
                     }}
                 />
                 <Button
                     event={''}
                     stylesText={{fontSize: 18, color: 'black', fontWeight: 'bold'}}
-                    text={'8:00'}
+                    text={time3}
                     stylesPressable={{
+                        borderColor:'#0D98BA',
+                        borderWidth:1,
                         borderRadius: 10,
                         alignItems: 'center',
                         justifyContent: 'center',
                         width: 80,
                         height: 50,
-                        backgroundColor: '#0D98BA'
+                        backgroundColor: '#e9f3fd'
                     }}
                 />
             </View>
         </>
     );
 };
+
+type props = {
+    title: 'Morning' | 'Afternoon' | 'Night',
+    time1: string,
+    time2: string,
+    time3: string
+}
