@@ -1,4 +1,4 @@
-import {SafeAreaView, ScrollView, View} from "react-native";
+import {SafeAreaView, ScrollView, StyleSheet, View} from "react-native";
 import {Space} from "../../components/Space.tsx";
 import {CategoryButton} from "../../components/CategoryButton.tsx";
 // @ts-ignore
@@ -16,40 +16,54 @@ import tooth from "../../assets/icon/tooth.png";
 import {GoBackButton} from "../../components/GoBackButton.tsx";
 
 export function AllCategories() {
+    let handleGoBackEvent=()=>{
+
+    }
+
+    let handleCategoryButtonEvent=()=>{
+
+    }
+
     return (
-        <SafeAreaView style={{flex: 1, backgroundColor: '#e9f3fd'}}>
-            <ScrollView style={{flex: 1}} contentContainerStyle={{flexGrow: 1}}>
-                <View style={{
-                    flex: 1,
-                    width: '100%',
-                    alignItems: 'center',
-                }}>
-                    <GoBackButton event={''}/>
+        <SafeAreaView style={styles.safeAreaView}>
+            <ScrollView style={styles.scrollView} contentContainerStyle={{flexGrow: 1}}>
+                <View style={styles.mainView}>
+                    <GoBackButton event={handleGoBackEvent}/>
                     <Space height={80}/>
-                    <View style={{
-                        width: '90%',
-                        gap: 25,
-                        // backgroundColor:'red',
-                        flexDirection: 'row',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}>
-                        <CategoryButton icon={brain} event={''} categoryName={'brain'}/>
-                        <CategoryButton icon={heart} event={''} categoryName={'heart'}/>
-                        <CategoryButton icon={eye} event={''} categoryName={'eye'}/>
-                        <CategoryButton icon={neuron} event={''} categoryName={'neuron'}/>
-                        <CategoryButton icon={rash} event={''} categoryName={'rash'}/>
-                        <CategoryButton icon={tooth} event={''} categoryName={'tooth'}/>
-                        <CategoryButton icon={brain} event={''} categoryName={'brain'}/>
-                        <CategoryButton icon={heart} event={''} categoryName={'heart'}/>
-                        <CategoryButton icon={eye} event={''} categoryName={'eye'}/>
-                        <CategoryButton icon={neuron} event={''} categoryName={'neuron'}/>
-                        <CategoryButton icon={rash} event={''} categoryName={'rash'}/>
-                        <CategoryButton icon={tooth} event={''} categoryName={'tooth'}/>
+                    <View style={styles.categoryButtonView}>
+                        <CategoryButton icon={brain} event={handleCategoryButtonEvent} categoryName={'brain'}/>
+                        <CategoryButton icon={heart} event={handleCategoryButtonEvent} categoryName={'heart'}/>
+                        <CategoryButton icon={eye} event={handleCategoryButtonEvent} categoryName={'eye'}/>
+                        <CategoryButton icon={neuron} event={handleCategoryButtonEvent} categoryName={'neuron'}/>
+                        <CategoryButton icon={rash} event={handleCategoryButtonEvent} categoryName={'rash'}/>
+                        <CategoryButton icon={tooth} event={handleCategoryButtonEvent} categoryName={'tooth'}/>
+                        <CategoryButton icon={brain} event={handleCategoryButtonEvent} categoryName={'brain'}/>
+                        <CategoryButton icon={heart} event={handleCategoryButtonEvent} categoryName={'heart'}/>
+                        <CategoryButton icon={eye} event={handleCategoryButtonEvent} categoryName={'eye'}/>
+                        <CategoryButton icon={neuron} event={handleCategoryButtonEvent} categoryName={'neuron'}/>
+                        <CategoryButton icon={rash} event={handleCategoryButtonEvent} categoryName={'rash'}/>
+                        <CategoryButton icon={tooth} event={handleCategoryButtonEvent} categoryName={'tooth'}/>
                     </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
     );
 }
+
+let styles=StyleSheet.create({
+    safeAreaView:{flex: 1, backgroundColor: '#e9f3fd'},
+    scrollView:{flex: 1},
+    mainView:{
+        flex: 1,
+        width: '100%',
+        alignItems: 'center',
+    },
+     categoryButtonView:{
+         width: '90%',
+         gap: 25,
+         flexDirection: 'row',
+         flexWrap: 'wrap',
+         justifyContent: 'center',
+         alignItems: 'center'
+     },
+})
