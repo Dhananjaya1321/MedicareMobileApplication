@@ -30,10 +30,10 @@ function App(): React.JSX.Element {
 
             {/*------------------------------------------------------------------------------------*/}
             {/*<AllCategories/>*/}
-            <SearchDetails/>
+            {/*<SearchDetails/>*/}
 
             {/*------------------------------------------------------------------------------------*/}
-            {/*<DoctorDetailsPage/>*/}
+            <DoctorDetailsPage/>
             {/*<BookingPage/>*/}
         </>
     );
