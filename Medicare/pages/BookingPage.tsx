@@ -6,31 +6,33 @@ import {Button} from "../components/Button.tsx";
 import {TimePicker} from "../components/TimePicker.tsx";
 
 export function BookingPage() {
+    let handleGoBackEvent = () => {
 
+    }
+
+    let handleBookNowButtonEvent = () => {
+
+    }
     return (
-        <SafeAreaView style={{flex: 1, backgroundColor: '#e9f3fd'}}>
-            <ScrollView style={{flex: 1}} contentContainerStyle={{flexGrow: 1}}>
-                <View style={{
-                    flex: 1,
-                    width: '100%',
-                    alignItems: 'center',
-                }}>
-                    <GoBackButton event={''}/>
+        <SafeAreaView style={styles.safeAreaView}>
+            <ScrollView style={styles.scrollView} contentContainerStyle={{flexGrow: 1}}>
+                <View style={styles.mainView}>
+                    <GoBackButton event={handleGoBackEvent}/>
                     <Space height={50}/>
 
                     <View style={{width: '85%'}}>
                         <Space height={20}/>
 
 
-                        <Text style={{color: 'black', fontSize: 22, fontWeight: 'bold'}}>J. P. Isuru
+                        <Text style={styles.doctorNameText}>J. P. Isuru
                             Dhananjaya</Text>
-                        <Text style={{fontSize: 18, color: 'black', marginTop: 2}}>Cardiologist</Text>
+                        <Text style={styles.doctorCategoryText}>Cardiologist</Text>
                         <Space height={20}/>
 
-                        <View style={{width: '80%', height: 1, backgroundColor: '#0D98BA', alignSelf: 'center'}}/>
+                        <View style={styles.horizontalLine}/>
                         <Space height={20}/>
 
-                        <Text style={{fontSize: 18, color: 'black', marginTop: 2, fontWeight: 'bold'}}>Select
+                        <Text style={styles.selectDateText}>Select
                             Date</Text>
                         <Space height={10}/>
                         <DatePicker/>
@@ -44,22 +46,38 @@ export function BookingPage() {
                         <Space height={35}/>
                         <Button
                             text={'Book now'}
-                            stylesPressable={{
-                                alignSelf:'center',
-                                borderRadius: 10,
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                width: '90%',
-                                height: 60,
-                                backgroundColor: '#0D98BA'
-                            }}
-                            stylesText={{
-                                fontSize: 22, color: 'white', fontWeight: 'bold'
-                            }}
-                            event={''}/>
+                            stylesPressable={styles.bookNowButton}
+                            stylesText={styles.bookNowButtonText}
+                            event={handleBookNowButtonEvent}/>
                     </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
     );
 }
+
+let styles = StyleSheet.create({
+    safeAreaView: {flex: 1, backgroundColor: '#e9f3fd'},
+    scrollView: {flex: 1},
+    mainView: {
+        flex: 1,
+        width: '100%',
+        alignItems: 'center',
+    },
+    doctorNameText:{color: 'black', fontSize: 22, fontWeight: 'bold'},
+    doctorCategoryText:{fontSize: 18, color: 'black', marginTop: 2},
+    horizontalLine:{width: '80%', height: 1, backgroundColor: '#0D98BA', alignSelf: 'center'},
+    selectDateText:{fontSize: 18, color: 'black', marginTop: 2, fontWeight: 'bold'},
+    bookNowButton:{
+        alignSelf:'center',
+        borderRadius: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '90%',
+        height: 60,
+        backgroundColor: '#0D98BA'
+    },
+    bookNowButtonText:{
+        fontSize: 22, color: 'white', fontWeight: 'bold'
+    }
+});

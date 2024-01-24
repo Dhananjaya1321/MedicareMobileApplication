@@ -33,8 +33,8 @@ function App(): React.JSX.Element {
             {/*<SearchDetails/>*/}
 
             {/*------------------------------------------------------------------------------------*/}
-            <DoctorDetailsPage/>
-            {/*<BookingPage/>*/}
+            {/*<DoctorDetailsPage/>*/}
+            <BookingPage/>
         </>
     );
 }
