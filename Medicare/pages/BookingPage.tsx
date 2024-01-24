@@ -13,6 +13,7 @@ export function BookingPage() {
     let handleBookNowButtonEvent = () => {
 
     }
+
     return (
         <SafeAreaView style={styles.safeAreaView}>
             <ScrollView style={styles.scrollView} contentContainerStyle={{flexGrow: 1}}>
@@ -64,12 +65,12 @@ let styles = StyleSheet.create({
         width: '100%',
         alignItems: 'center',
     },
-    doctorNameText:{color: 'black', fontSize: 22, fontWeight: 'bold'},
-    doctorCategoryText:{fontSize: 18, color: 'black', marginTop: 2},
-    horizontalLine:{width: '80%', height: 1, backgroundColor: '#0D98BA', alignSelf: 'center'},
-    selectDateText:{fontSize: 18, color: 'black', marginTop: 2, fontWeight: 'bold'},
-    bookNowButton:{
-        alignSelf:'center',
+    doctorNameText: {color: 'black', fontSize: 22, fontWeight: 'bold'},
+    doctorCategoryText: {fontSize: 18, color: 'black', marginTop: 2},
+    horizontalLine: {width: '80%', height: 1, backgroundColor: '#0D98BA', alignSelf: 'center'},
+    selectDateText: {fontSize: 18, color: 'black', marginTop: 2, fontWeight: 'bold'},
+    bookNowButton: {
+        alignSelf: 'center',
         borderRadius: 10,
         alignItems: 'center',
         justifyContent: 'center',
@@ -77,7 +78,7 @@ let styles = StyleSheet.create({
         height: 60,
         backgroundColor: '#0D98BA'
     },
-    bookNowButtonText:{
+    bookNowButtonText: {
         fontSize: 22, color: 'white', fontWeight: 'bold'
     }
 });

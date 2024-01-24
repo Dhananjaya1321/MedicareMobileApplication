@@ -15,6 +15,7 @@ import {AllCategories} from "./pages/subPages/AllCategories.tsx";
 import {SearchDetails} from "./pages/subPages/SearchDetails.tsx";
 import {DoctorDetailsPage} from "./pages/DoctorDetailsPage.tsx";
 import {BookingPage} from "./pages/BookingPage.tsx";
+import {BookingConformationPage} from "./pages/BookingConformationPage.tsx";
 
 type SectionProps = PropsWithChildren<{
     title: string;
@@ -34,7 +35,8 @@ function App(): React.JSX.Element {
 
             {/*------------------------------------------------------------------------------------*/}
             {/*<DoctorDetailsPage/>*/}
-            <BookingPage/>
+            {/*<BookingPage/>*/}
+            <BookingConformationPage/>
         </>
     );
 }
