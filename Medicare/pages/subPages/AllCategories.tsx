@@ -15,9 +15,9 @@ import rash from "../../assets/icon/rash.png";
 import tooth from "../../assets/icon/tooth.png";
 import {GoBackButton} from "../../components/GoBackButton.tsx";
 
-export function AllCategories() {
+export function AllCategories(props:any) {
     let handleGoBackEvent=()=>{
-
+        props.navigation.goBack();
     }
 
     let handleCategoryButtonEvent=()=>{

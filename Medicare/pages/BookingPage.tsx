@@ -5,13 +5,13 @@ import DatePicker from "../components/DatePicker.tsx";
 import {Button} from "../components/Button.tsx";
 import {TimePicker} from "../components/TimePicker.tsx";
 
-export function BookingPage() {
+export function BookingPage(props:any) {
     let handleGoBackEvent = () => {
-
+        props.navigation.goBack();
     }
 
     let handleBookNowButtonEvent = () => {
-
+        props.navigation.push('BookingConformationPage');
     }
 
     return (

@@ -4,9 +4,9 @@ import icon from '../assets/icon/success.png';
 import {Button} from "../components/Button.tsx";
 import {Space} from "../components/Space.tsx";
 
-export const BookingConformationPage = () => {
+export const BookingConformationPage = (props:any) => {
     let handleDoneButtonEvent = () => {
-
+        props.navigation.push('HomePage');
     }
 
     return (

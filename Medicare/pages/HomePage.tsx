@@ -20,13 +20,13 @@ import {useState} from "react";
 export function HomePage(props:any) {
     const [search, setSearchValue] = useState('');
     let handleSearchEvent = function (event: any) {
-        setSearchValue(event);
+        props.navigation.push('SearchDetails');
     }
-    let handleCategoryButtons = function (event: any) {
-
+    let handleCategoryButtons = function () {
+        props.navigation.push('SearchDetails');
     }
-    let handleCategoryButton = function (event: any) {
-
+    let handleAllCategoryButton = function () {
+        props.navigation.push('AllCategories');
     }
 
     return (
@@ -48,7 +48,7 @@ export function HomePage(props:any) {
                                 <CategoryButton icon={eye} event={handleCategoryButtons} categoryName={'eye'}/>
                                 <CategoryButton icon={heart} event={handleCategoryButtons} categoryName={'heart'}/>
                                 <CategoryButton icon={tooth} event={handleCategoryButtons} categoryName={'tooth'}/>
-                                <CategoryButton icon={category} event={handleCategoryButton} categoryName={'other'}/>
+                                <CategoryButton icon={category} event={handleAllCategoryButton} categoryName={'other'}/>
                             </View>{/*Category items section*/}
                         </View>{/*Category section*/}
                         {/*--------------------------------------------------------------------------------------------*/}
@@ -58,18 +58,18 @@ export function HomePage(props:any) {
                         <View style={styles.cartAndCategoryView}>
                             <Text style={styles.topDoctorsText}>Top Doctors</Text>
                             <View style={styles.doctorsCardView}>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Cardiologist'}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Dermatologist'}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Endocrinologist'}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Gastroenterologist'}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Internists'}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Psychiatrist'}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Cardiologist'}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Dermatologist'}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Endocrinologist'}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Gastroenterologist'}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Internists'}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Psychiatrist'}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Cardiologist'} navigation={props}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Dermatologist'} navigation={props}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Endocrinologist'} navigation={props}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Gastroenterologist'} navigation={props}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Internists'} navigation={props}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Psychiatrist'} navigation={props}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Cardiologist'} navigation={props}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Dermatologist'} navigation={props}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Endocrinologist'} navigation={props}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Gastroenterologist'} navigation={props}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Internists'} navigation={props}/>
+                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Psychiatrist'} navigation={props}/>
                             </View>
                         </View>{/*card section*/}
 

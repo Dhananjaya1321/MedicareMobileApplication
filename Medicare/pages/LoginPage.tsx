@@ -42,14 +42,14 @@ export function LoginPage(props:any) {
                                 text={'Forgot Password ?'}
                                 stylesPressable={styles.loginButton}
                                 stylesText={styles.loginButtonText}
-                                event={handleLogin}/*event*/
+                                event={handleForgotPassword}/*event*/
                             />
                         </View>
                         <Button
                             text={'Login'}
                             stylesPressable={styles.forgotPasswordButton}
                             stylesText={styles.forgotPasswordButtonText}
-                            event={handleForgotPassword}/*event*/
+                            event={handleLogin}/*event*/
                         />
                     </View>
                 </View>

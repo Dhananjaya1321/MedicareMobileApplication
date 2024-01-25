@@ -3,12 +3,12 @@ import {GoBackButton} from "../../components/GoBackButton.tsx";
 import {DoctorCard} from "../../components/DoctorCard.tsx";
 import {Space} from "../../components/Space.tsx";
 import {SearchBar} from "../../components/SearchBar.tsx";
-import {useState} from "react";
+import React, {useState} from "react";
 
-export function SearchDetails() {
+export function SearchDetails(props:any) {
     const [search, setSearch] = useState('');
     let handleGoBackEvent = () => {
-
+        props.navigation.goBack();
     }
     let handleSearchEvent = (event: any) => {
         setSearch(event);
@@ -25,18 +25,18 @@ export function SearchDetails() {
                         <SearchBar value={search} event={handleSearchEvent}/>
                         <Space height={40}/>
                         <View style={styles.doctorCardView}>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Cardiologist'}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Dermatologist'}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Endocrinologist'}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Gastroenterologist'}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Internists'}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Psychiatrist'}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Cardiologist'}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Dermatologist'}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Endocrinologist'}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Gastroenterologist'}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Internists'}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Psychiatrist'}/>
+                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Cardiologist'} navigation={props}/>
+                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Dermatologist'} navigation={props}/>
+                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Endocrinologist'} navigation={props}/>
+                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Gastroenterologist'} navigation={props}/>
+                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Internists'} navigation={props}/>
+                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Psychiatrist'} navigation={props}/>
+                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Cardiologist'} navigation={props}/>
+                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Dermatologist'} navigation={props}/>
+                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Endocrinologist'} navigation={props}/>
+                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Gastroenterologist'} navigation={props}/>
+                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Internists'} navigation={props}/>
+                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Psychiatrist'} navigation={props}/>
                         </View>
                     </View>
                 </View>

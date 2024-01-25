@@ -1,7 +1,11 @@
 import {Platform, StyleSheet, Text, View} from "react-native";
 import {CartButton} from "./CartButton.tsx";
 
-export function DoctorCard({name, category}: props) {
+export function DoctorCard({name, category,navigation}: props) {
+    let handleDoctorCardMoreDetailsEvent = (event: any) => {
+        navigation.navigation.push('DoctorDetailsPage');
+    }
+
     return (
         <View style={styles.cardMainView}>
             <View style={styles.profilePhotoView}></View>{/*profile photo*/}
@@ -9,14 +13,15 @@ export function DoctorCard({name, category}: props) {
                 <Text style={styles.nameText}>{name}</Text>{/*name*/}
                 <Text style={styles.categoryText}>{category}</Text>{/*category*/}
             </View>{/*details view*/}
-            <CartButton event={''}/>
+            <CartButton event={handleDoctorCardMoreDetailsEvent}/>
         </View>
     );
 }
 
 type props = {
     name: string,
-    category: string
+    category: string,
+    navigation:any
 }
 
 const styles = StyleSheet.create({

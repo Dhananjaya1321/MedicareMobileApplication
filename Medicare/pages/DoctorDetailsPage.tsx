@@ -5,13 +5,14 @@ import {Space} from "../components/Space.tsx";
 import {Button} from "../components/Button.tsx";
 import {GoBackButton} from "../components/GoBackButton.tsx";
 
-export function DoctorDetailsPage() {
+export function DoctorDetailsPage(props:any) {
     let handleGoBackEvent = () => {
-
+        props.navigation.goBack();
     }
     let handleBookAndAppointEvent = () => {
-
+        props.navigation.push('BookingPage');
     }
+
     return (
         <SafeAreaView style={styles.safeAreaView}>
             <ScrollView style={styles.scrollView} contentContainerStyle={{flexGrow: 1}}>
