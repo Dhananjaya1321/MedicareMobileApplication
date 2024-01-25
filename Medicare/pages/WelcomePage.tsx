@@ -4,14 +4,14 @@ import doctor from "../assets/image/doctor.png";
 import React from "react";
 import {Button} from "../components/Button.tsx";
 
-export function WelcomePage() {
+export function WelcomePage( props: any ) {
 
     let handleLogin=()=>{
-
+        props.navigation.push('LoginPage');
     }
 
      let handleCreateAccount=()=>{
-
+         props.navigation.push('CreateAccountPage');
     }
 
     return (

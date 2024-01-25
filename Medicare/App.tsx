@@ -16,28 +16,21 @@ import {SearchDetails} from "./pages/subPages/SearchDetails.tsx";
 import {DoctorDetailsPage} from "./pages/DoctorDetailsPage.tsx";
 import {BookingPage} from "./pages/BookingPage.tsx";
 import {BookingConformationPage} from "./pages/BookingConformationPage.tsx";
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from "react-native-screens/native-stack";
 
-type SectionProps = PropsWithChildren<{
-    title: string;
-}>;
+const Stack = createNativeStackNavigator();
 
 function App(): React.JSX.Element {
     return (
-        <>
-            {/*<WelcomePage/>*/}
-            {/*<LoginPage/>*/}
-            {/*<CreateAccountPage/>*/}
-            {/*<HomePage/>*/}
-
-            {/*------------------------------------------------------------------------------------*/}
-            {/*<AllCategories/>*/}
-            {/*<SearchDetails/>*/}
-
-            {/*------------------------------------------------------------------------------------*/}
-            {/*<DoctorDetailsPage/>*/}
-            {/*<BookingPage/>*/}
-            <BookingConformationPage/>
-        </>
+        <NavigationContainer>
+            <Stack.Navigator initialRouteName={"WelcomePage"}>
+                <Stack.Screen name="WelcomePage" component={WelcomePage} options={{headerShown: false}}/>
+                <Stack.Screen name="LoginPage" component={LoginPage} options={{headerShown: false}}/>
+                <Stack.Screen name="CreateAccountPage" component={CreateAccountPage} options={{headerShown: false}}/>
+                <Stack.Screen name="HomePage" component={HomePage} options={{headerShown: false}}/>
+            </Stack.Navigator>
+        </NavigationContainer>
     );
 }
 

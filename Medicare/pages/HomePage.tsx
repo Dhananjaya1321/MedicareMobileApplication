@@ -17,7 +17,7 @@ import {AdsAndOffers} from "../components/AdsAndOffers.tsx";
 import {SearchBar} from "../components/SearchBar.tsx";
 import {useState} from "react";
 
-export function HomePage() {
+export function HomePage(props:any) {
     const [search, setSearchValue] = useState('');
     let handleSearchEvent = function (event: any) {
         setSearchValue(event);

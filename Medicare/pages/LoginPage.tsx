@@ -9,7 +9,7 @@ import {useState} from "react";
 import {Logo} from "../components/Logo.tsx";
 import {GoBackButton} from "../components/GoBackButton.tsx";
 
-export function LoginPage() {
+export function LoginPage(props:any) {
     let [username, setUsername] = useState('');
     let [password, setPassword] = useState('');
     let handleUsernameChange = function (event: any) {
@@ -18,15 +18,16 @@ export function LoginPage() {
     let handlePasswordChange = function (event: any) {
         setPassword(event);
     }
-    let handleGoBack = function (event: any) {
+    let handleGoBack = function () {
+        props.navigation.goBack();
+    }
+    let handleLogin = function () {
+        props.navigation.push('HomePage');
+    }
+    let handleForgotPassword = function () {
 
     }
-    let handleLogin = function (event: any) {
 
-    }
-    let handleForgotPassword = function (event: any) {
-
-    }
     return (
         <SafeAreaView style={styles.safeAreaView}>
             <ScrollView style={styles.scrollView} contentContainerStyle={{flexGrow: 1}}>

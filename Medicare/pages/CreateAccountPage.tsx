@@ -8,7 +8,7 @@ import {Logo} from "../components/Logo.tsx";
 import {Space} from "../components/Space.tsx";
 import {GoBackButton} from "../components/GoBackButton.tsx";
 
-export function CreateAccountPage() {
+export function CreateAccountPage(props:any) {
     let [fullName, setFullName] = useState('');
     let [nic, setNIC] = useState('');
     let [address, setAddress] = useState('');
@@ -30,11 +30,11 @@ export function CreateAccountPage() {
         setPassword(event);
     }
 
-   let handleGoBack = function (event: any) {
-
+   let handleGoBack = function () {
+       props.navigation.goBack();
     }
-   let handleCreateAccount = function (event: any) {
-
+   let handleCreateAccount = function () {
+       props.navigation.push('HomePage');
     }
 
     return (
