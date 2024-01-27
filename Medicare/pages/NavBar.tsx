@@ -7,11 +7,11 @@ import categoryNavBar from "../assets/icon/category-nav-bar.png";
 import calenderNavBar from "../assets/icon/calendar-nav-bar.png";
 // @ts-ignore
 import userNavBar from "../assets/icon/user-nav-bar.png";
-import {NavButton} from "./NavButton.tsx";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import {NavigationContainer} from "@react-navigation/native";
-import {HomePage} from "../pages/HomePage.tsx";
-import {AllCategories} from "../pages/subPages/AllCategories.tsx";
+import {HomePage} from "./HomePage.tsx";
+import {AllCategories} from "./subPages/AllCategories.tsx";
+import {UserProfile} from "./subPages/UserProfile.tsx";
 
 export function NavBar(props: any) {
     const Tab = createBottomTabNavigator();
@@ -35,6 +35,18 @@ export function NavBar(props: any) {
                 tabBarIcon: ({focused}) => (
                     <Image
                         source={categoryNavBar}
+                        style={{
+                            width: 30,
+                            height: 30,
+                            tintColor: focused ? 'black' : 'gray',
+                        }}
+                    />
+                ),
+            }}/>
+            <Tab.Screen name="Profile" component={UserProfile} options={{
+                tabBarIcon: ({focused}) => (
+                    <Image
+                        source={userNavBar}
                         style={{
                             width: 30,
                             height: 30,

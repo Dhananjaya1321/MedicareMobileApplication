@@ -9,10 +9,12 @@ import heart from "../assets/icon/heart.png";
 // @ts-ignore
 import tooth from "../assets/icon/tooth.png";
 // @ts-ignore
+import doctor from "../assets/image/doctor1.jpg";
+// @ts-ignore
 import category from "../assets/icon/categorize.png";
 import {CategoryButton} from "../components/CategoryButton.tsx";
 import {DoctorCard} from "../components/DoctorCard.tsx";
-import {NavBar} from "../components/NavBar.tsx";
+import {NavBar} from "./NavBar.tsx";
 import {AdsAndOffers} from "../components/AdsAndOffers.tsx";
 import {SearchBar} from "../components/SearchBar.tsx";
 import {useState} from "react";
@@ -58,22 +60,22 @@ export function HomePage(props:any) {
                         <View style={styles.cartAndCategoryView}>
                             <Text style={styles.topDoctorsText}>Top Doctors</Text>
                             <View style={styles.doctorsCardView}>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Cardiologist'} navigation={props}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Dermatologist'} navigation={props}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Endocrinologist'} navigation={props}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Gastroenterologist'} navigation={props}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Internists'} navigation={props}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Psychiatrist'} navigation={props}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Cardiologist'} navigation={props}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Dermatologist'} navigation={props}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Endocrinologist'} navigation={props}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Gastroenterologist'} navigation={props}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Internists'} navigation={props}/>
-                                <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Psychiatrist'} navigation={props}/>
+                                <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Cardiologist'} navigation={props}/>
+                                <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Dermatologist'} navigation={props}/>
+                                <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Endocrinologist'} navigation={props}/>
+                                <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Gastroenterologist'} navigation={props}/>
+                                <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Internists'} navigation={props}/>
+                                <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Psychiatrist'} navigation={props}/>
+                                <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Cardiologist'} navigation={props}/>
+                                <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Dermatologist'} navigation={props}/>
+                                <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Endocrinologist'} navigation={props}/>
+                                <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Gastroenterologist'} navigation={props}/>
+                                <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Internists'} navigation={props}/>
+                                <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Psychiatrist'} navigation={props}/>
                             </View>
                         </View>{/*card section*/}
 
-                        <Space height={70}/>
+                        <Space height={20}/>
                         {/*--------------------------------------------------------------------------------------------*/}
                     </View>{/*This view width is 90% on screen*/}
                 </View>{/*This view width is 100% on screen*/}

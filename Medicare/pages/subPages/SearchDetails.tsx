@@ -4,7 +4,8 @@ import {DoctorCard} from "../../components/DoctorCard.tsx";
 import {Space} from "../../components/Space.tsx";
 import {SearchBar} from "../../components/SearchBar.tsx";
 import React, {useState} from "react";
-
+// @ts-ignore
+import doctor from "../../assets/image/doctor1.jpg";
 export function SearchDetails(props:any) {
     const [search, setSearch] = useState('');
     let handleGoBackEvent = () => {
@@ -25,18 +26,18 @@ export function SearchDetails(props:any) {
                         <SearchBar value={search} event={handleSearchEvent}/>
                         <Space height={40}/>
                         <View style={styles.doctorCardView}>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Cardiologist'} navigation={props}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Dermatologist'} navigation={props}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Endocrinologist'} navigation={props}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Gastroenterologist'} navigation={props}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Internists'} navigation={props}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Psychiatrist'} navigation={props}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Cardiologist'} navigation={props}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Dermatologist'} navigation={props}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Endocrinologist'} navigation={props}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Gastroenterologist'} navigation={props}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Internists'} navigation={props}/>
-                            <DoctorCard name={'J. P. Isuru Dhananjaya'} category={'Psychiatrist'} navigation={props}/>
+                            <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Cardiologist'} navigation={props}/>
+                            <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Dermatologist'} navigation={props}/>
+                            <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Endocrinologist'} navigation={props}/>
+                            <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Gastroenterologist'} navigation={props}/>
+                            <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Internists'} navigation={props}/>
+                            <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Psychiatrist'} navigation={props}/>
+                            <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Cardiologist'} navigation={props}/>
+                            <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Dermatologist'} navigation={props}/>
+                            <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Endocrinologist'} navigation={props}/>
+                            <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Gastroenterologist'} navigation={props}/>
+                            <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Internists'} navigation={props}/>
+                            <DoctorCard image={doctor} name={'J. P. Isuru Dhananjaya'} category={'Psychiatrist'} navigation={props}/>
                         </View>
                     </View>
                 </View>

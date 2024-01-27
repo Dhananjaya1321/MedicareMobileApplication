@@ -21,7 +21,7 @@ export function AllCategories(props:any) {
     }
 
     let handleCategoryButtonEvent=()=>{
-
+        props.navigation.push('SearchDetails');
     }
 
     return (

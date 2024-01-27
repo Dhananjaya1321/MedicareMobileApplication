@@ -1,14 +1,16 @@
-import {Platform, StyleSheet, Text, View} from "react-native";
+import {Image, Platform, StyleSheet, Text, View} from "react-native";
 import {CartButton} from "./CartButton.tsx";
 
-export function DoctorCard({name, category,navigation}: props) {
+export function DoctorCard({image, name, category,navigation}: props) {
     let handleDoctorCardMoreDetailsEvent = (event: any) => {
         navigation.navigation.push('DoctorDetailsPage');
     }
 
     return (
         <View style={styles.cardMainView}>
-            <View style={styles.profilePhotoView}></View>{/*profile photo*/}
+            <View style={styles.profilePhotoView}>
+                <Image style={styles.profilePhoto} source={image}/>
+            </View>{/*profile photo*/}
             <View style={styles.profileDetailsView}>
                 <Text style={styles.nameText}>{name}</Text>{/*name*/}
                 <Text style={styles.categoryText}>{category}</Text>{/*category*/}
@@ -19,6 +21,7 @@ export function DoctorCard({name, category,navigation}: props) {
 }
 
 type props = {
+    image: any,
     name: string,
     category: string,
     navigation:any
@@ -47,6 +50,7 @@ const styles = StyleSheet.create({
         }),
     },
     profilePhotoView: {width: 80, height: 80, backgroundColor: 'red', marginLeft: 10, borderRadius: 10},
+    profilePhoto: {width: 80, height: 80, borderRadius: 10},
     profileDetailsView: {width: 250, height: 80},
     nameText: {fontSize: 20, color: 'black'},
     categoryText: {fontSize: 14, color: 'black',marginTop:5}
