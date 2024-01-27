@@ -6,7 +6,7 @@ import {Space} from "../components/Space.tsx";
 
 export const BookingConformationPage = (props:any) => {
     let handleDoneButtonEvent = () => {
-        props.navigation.push('HomePage');
+        props.navigation.push('NavBar');
     }
 
     return (

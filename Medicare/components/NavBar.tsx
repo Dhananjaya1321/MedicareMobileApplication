@@ -8,25 +8,41 @@ import calenderNavBar from "../assets/icon/calendar-nav-bar.png";
 // @ts-ignore
 import userNavBar from "../assets/icon/user-nav-bar.png";
 import {NavButton} from "./NavButton.tsx";
+import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
+import {NavigationContainer} from "@react-navigation/native";
+import {HomePage} from "../pages/HomePage.tsx";
+import {AllCategories} from "../pages/subPages/AllCategories.tsx";
 
-export function NavBar() {
+export function NavBar(props: any) {
+    const Tab = createBottomTabNavigator();
+
     return (
-        <View
-            style={{
-                width: '100%',
-                height: 60,
-                backgroundColor: 'white',
-                position: 'absolute',
-                bottom: 0,
-                flexDirection: 'row',
-                justifyContent: 'space-around',
-                alignItems: 'center'
+        <Tab.Navigator initialRouteName={'HomePage'} screenOptions={{headerShown: false}}>
+            <Tab.Screen name="Home" component={HomePage} options={{
+                tabBarIcon: ({focused}) => (
+                    <Image
+                        source={homeNavBar}
+                        style={{
+                            width: 30,
+                            height: 30,
+                            tintColor: focused ? 'black' : 'gray',
+                        }}
+                    />
+                ),
             }}
-        >
-            <NavButton icon={homeNavBar} event={''} name={'Home'}/>
-            <NavButton icon={categoryNavBar} event={''} name={'Category'}/>
-            <NavButton icon={calenderNavBar} event={''} name={'Booking'}/>
-            <NavButton icon={userNavBar} event={''} name={'Profile'}/>
-        </View>
+            />
+            <Tab.Screen name="Categories" component={AllCategories} options={{
+                tabBarIcon: ({focused}) => (
+                    <Image
+                        source={categoryNavBar}
+                        style={{
+                            width: 30,
+                            height: 30,
+                            tintColor: focused ? 'black' : 'gray',
+                        }}
+                    />
+                ),
+            }}/>
+        </Tab.Navigator>
     );
 }

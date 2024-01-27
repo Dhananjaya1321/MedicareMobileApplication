@@ -78,7 +78,6 @@ export function HomePage(props:any) {
                     </View>{/*This view width is 90% on screen*/}
                 </View>{/*This view width is 100% on screen*/}
             </ScrollView>
-            <NavBar/>{/*bottom navigation bar*/}
         </SafeAreaView>
     );
 }

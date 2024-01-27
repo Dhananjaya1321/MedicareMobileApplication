@@ -34,7 +34,7 @@ export function CreateAccountPage(props:any) {
        props.navigation.goBack();
     }
    let handleCreateAccount = function () {
-       props.navigation.push('HomePage');
+       props.navigation.push('NavBar');
     }
 
     return (

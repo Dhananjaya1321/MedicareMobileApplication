@@ -19,6 +19,7 @@ import {BookingConformationPage} from "./pages/BookingConformationPage.tsx";
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from "react-native-screens/native-stack";
 import {DoctorCard} from "./components/DoctorCard.tsx";
+import {NavBar} from "./components/NavBar.tsx";
 
 const Stack = createNativeStackNavigator();
 
@@ -29,7 +30,7 @@ function App(): React.JSX.Element {
                 <Stack.Screen name="WelcomePage" component={WelcomePage} options={{headerShown: false}}/>
                 <Stack.Screen name="LoginPage" component={LoginPage} options={{headerShown: false}}/>
                 <Stack.Screen name="CreateAccountPage" component={CreateAccountPage} options={{headerShown: false}}/>
-                <Stack.Screen name="HomePage" component={HomePage} options={{headerShown: false}}/>
+                <Stack.Screen name="NavBar" component={NavBar} options={{headerShown: false}}/>
                 <Stack.Screen name="AllCategories" component={AllCategories} options={{headerShown: false}}/>
                 <Stack.Screen name="SearchDetails" component={SearchDetails} options={{headerShown: false}}/>
                 <Stack.Screen name="DoctorDetailsPage" component={DoctorDetailsPage} options={{headerShown: false}}/>

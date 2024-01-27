@@ -22,7 +22,7 @@ export function LoginPage(props:any) {
         props.navigation.goBack();
     }
     let handleLogin = function () {
-        props.navigation.push('HomePage');
+        props.navigation.push('NavBar');
     }
     let handleForgotPassword = function () {
 
